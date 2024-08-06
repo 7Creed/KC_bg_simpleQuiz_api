@@ -1,0 +1,59 @@
+POST http://localhost:3000/v1/auth/register
+content-Type: application/json
+
+{
+    "fullName": "Admin Star",
+    "email": "abuja@gmail.com",
+    "password": "12245"
+}
+
+###
+POST http://localhost:3000/v1/auth/login
+content-Type: application/json
+
+{
+    "email": "abuja@gmail.com",
+    "password": "12245"
+}
+
+###
+GET http://localhost:3000/v1/users/quiz/2
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+
+
+###
+POST http://localhost:3000/v1/users/answer-a-question
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+
+{
+    "quiz": "66af9fce07dfd95d3312e48b",
+    "optionChosen": "optionB"
+}
+
+
+###
+POST http://localhost:3000/v1/users/mark-quiz
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+
+
+###
+GET http://localhost:3000/v1/users/quiz-history
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+
+###
+GET http://localhost:3000/v1/users/unanswered-question-numbers
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+
+
+
+# Not sure of this route
+###
+POST http://localhost:3000/v1/users/mark-quiz
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzQ3YmFlOGJhZDI2MTU0YTg0MWYiLCJmdWxsTmFtZSI6IlVzZXIgU3RhciIsImVtYWlsIjoiYWJ1amFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjI5MTQyNjN9.JbmGZTzotXJUhq9jMzBHv4jsJa97vuU_VzUT_iM3DEY
+

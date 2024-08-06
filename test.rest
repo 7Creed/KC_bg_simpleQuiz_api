@@ -1,0 +1,8 @@
+POST http://localhost:3000/v1/auth/register
+content-Type: application/json
+
+{
+    "fullName": "Admin Star",
+    "email": "abujaAdmin@gmail.com",
+    "password": "12245"
+}
