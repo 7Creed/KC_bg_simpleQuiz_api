@@ -67,7 +67,7 @@ router.post("/login", async function (req, res, next) {
       role: userDetails.role,
     },
     userToken,
-    message: "Logged in successfully",
+    message: "Login successful",
   });
 });
 

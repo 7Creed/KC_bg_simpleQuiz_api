@@ -4,6 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
+const sharedRouter = require("./routes/shared");
+const cloudinary = require("cloudinary");
 require("dotenv").config();
 
 var adminRouter = require("./routes/admin");
@@ -11,6 +13,12 @@ var usersRouter = require("./routes/users");
 var authRouter = require("./routes/auth");
 
 var app = express();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
+});
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -30,6 +38,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/v1/auth", authRouter);
 app.use("/v1/admin", adminRouter);
 app.use("/v1/users", usersRouter);
+app.use("/v1/shared", sharedRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -36,14 +36,14 @@ router.get("/quiz/:page/:limit", async function (req, res, next) {
   const { page, limit } = req.params;
   const quizList = await quizCollection.paginate({}, { page, limit });
 
-  res.status(201).send({ quizList });
+  res.status(200).send({ quizList });
 });
 
 router.get("/quiz-by-id/:id", async function (req, res, next) {
   const { id } = req.params;
   const quiz = await quizCollection.findById(id);
 
-  res.status(201).send({ quiz });
+  res.status(200).send({ quiz });
 });
 
 router.put("/quiz/:id", async function (req, res, next) {

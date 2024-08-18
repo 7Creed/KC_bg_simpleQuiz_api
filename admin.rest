@@ -36,6 +36,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmN
 GET http://localhost:3000/v1/admin/quiz/1/10
 content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzU0NzY1NTI0MzlkNzM4OTU0NzQiLCJmdWxsTmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyNzg0OTc2fQ.ahEzfXDsBYGDVnaUeXpEgtaghoC1dpqCUAmFE7QIBd4
+###
+GET https://kc-bg-simplequiz-api.onrender.com/v1/admin/quiz/1/10
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNzU0NzY1NTI0MzlkNzM4OTU0NzQiLCJmdWxsTmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyNzg0OTc2fQ.ahEzfXDsBYGDVnaUeXpEgtaghoC1dpqCUAmFE7QIBd4
 
 ###
 PUT http://localhost:3000/v1/admin/quiz/66afa533b1e62953e0fda9ac
