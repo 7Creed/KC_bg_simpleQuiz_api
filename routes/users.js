@@ -10,6 +10,30 @@ router.use(verifyAuth);
 
 router.use(rolesAllowed(["user"]));
 
+// Gotten from app
+router.get("/emit-an-event", (req, res) => {
+  try {
+    // req.io.send(
+    //   "hello, this is an event fired from the 'emit-an-event' endpiont."
+    // );
+    req.io
+      .to(req.userDetails.userId)
+      .emit(
+        "sample",
+        "hello, this is an event fired from the 'emit-an-event' endpiont. This event is for " +
+          req.userDetails.fullName
+      );
+    // Not working
+    // req.io
+    //   .to(req.userDetails.userId)
+    //   .send("This message is for you " + req.userDetails.fullName);
+    res.send("Event emitted");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Internal server error");
+  }
+});
+
 router.get("/quiz/:questionNumber", async function (req, res, next) {
   const { questionNumber } = req.params;
 
